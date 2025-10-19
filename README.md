@@ -7,7 +7,7 @@ This project allows merchants to seamlessly manage their product inventory with 
 
 
 ### Application Walkthrough
-[![Watch Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+[![Watch Demo](https://i9.ytimg.com/vi_webp/8e9JpoezU7I/mqdefault.webp?v=68f4b9e8&sqp=CPjx0scG&rs=AOn4CLBHL5zcl5XrYv__4XJYYp_mLXFd3g)](https://youtu.be/8e9JpoezU7I)
 
 *Complete demonstration of authentication, product management, and analytics features*
 
@@ -128,11 +128,11 @@ This project allows merchants to seamlessly manage their product inventory with 
 
 1) Create a folder in your device
 
-2) Take terminal and by taking the cloned link enter: `git clone [cloned-link]`
+2) Take terminal and by taking the cloned link enter: `git clone https://github.com/hainweb/mini-merchant-dashboard.git`
 
 3) Now come back after closing that panel and you can see a folder named merchant-dashboard. Enter to that folder.
 
-4) Now type `cd merchant-dashboard` in terminal
+4) Now type `cd mini-merchant-dashboard` in terminal
 
 5) Now type `cd backend` and enter `npm install`
 
