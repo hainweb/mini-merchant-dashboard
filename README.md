@@ -5,9 +5,13 @@
 This project allows merchants to seamlessly manage their product inventory with secure authentication, add, edit, and delete products with React.js, Node.js, and Express.js.
 
 
+### Live Demo  
+🔗 **[https://mini-merchant-dashboard.vercel.app/](https://mini-merchant-dashboard.vercel.app)**  
+
+---
 
 ### Application Walkthrough
-[![Watch Demo](https://i9.ytimg.com/vi_webp/8e9JpoezU7I/mqdefault.webp?v=68f4b9e8&sqp=CPjx0scG&rs=AOn4CLBHL5zcl5XrYv__4XJYYp_mLXFd3g)](https://youtu.be/8e9JpoezU7I)
+[![Watch Demo](https://img.youtube.com/vi/8e9JpoezU7I/maxresdefault.jpg)](https://youtu.be/8e9JpoezU7I)
 
 *Complete demonstration of authentication, product management, and analytics features*
 
@@ -55,6 +59,20 @@ This project allows merchants to seamlessly manage their product inventory with 
 - **services**: API configuration with Axios
 - **hooks**: Custom React hooks (useProducts, useStats)
 - **utils**: Helper functions and constants
+
+
+
+
+### Environment Variables (.env)
+
+For the frontend, create a `.env` file in the `frontend` folder:
+
+#### Variables
+- **REACT_APP_API_URL**: URL of the backend API  
+  Example: `REACT_APP_API_URL=http://localhost:5000/api`
+
+> If this variable is not defined, the frontend will fallback to `'http://localhost:5000/api'`.
+
 
 ---
 
