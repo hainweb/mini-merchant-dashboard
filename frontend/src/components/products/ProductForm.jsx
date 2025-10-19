@@ -3,6 +3,7 @@ import Modal from "../common/Modal";
 import Input from "../common/Input";
 import Button from "../common/Button";
 import { productsAPI } from "../../services/api";
+import toast from "react-hot-toast";
 
 const ProductForm = ({ isOpen, onClose, product = null }) => {
   const [formData, setFormData] = useState({
@@ -94,10 +95,11 @@ const ProductForm = ({ isOpen, onClose, product = null }) => {
 
       if (product) {
         await productsAPI.update(product.id, productData);
+        toast.success("Product updated successfully");
       } else {
         await productsAPI.create(productData);
+        toast.success("Product added successfully");
       }
-
       onClose(true);
     } catch (err) {
       setApiError(err.response?.data?.message || "Failed to save product");

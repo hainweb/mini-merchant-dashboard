@@ -4,6 +4,7 @@ import { setToken } from "../utils/auth";
 import Card from "../components/common/Card";
 import Button from "../components/common/Button";
 import { setUserEmail } from "../utils/user";
+import toast from "react-hot-toast";
 
 const Login = ({ onLogin }) => {
   const [credentials, setCredentials] = useState({
@@ -30,6 +31,7 @@ const Login = ({ onLogin }) => {
       const response = await authAPI.login(credentials);
       setToken(response.data.token);
       setUserEmail(credentials.email);
+      toast.success("Login successfully");
       onLogin();
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");

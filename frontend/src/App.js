@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import { isAuthenticated } from './utils/auth';
+import ToastProvider from './components/common/ToastProvider';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastProvider/>
       {authenticated ? (
         <Dashboard onLogout={handleLogout} />
       ) : (

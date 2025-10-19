@@ -8,6 +8,7 @@ import ProductForm from "../components/products/ProductForm";
 import useProducts from "../hooks/useProducts";
 import useStats from "../hooks/useStats";
 import { getUserEmail } from "../utils/user";
+import toast from "react-hot-toast";
 
 const Dashboard = ({ onLogout }) => {
   const {
@@ -42,6 +43,7 @@ const Dashboard = ({ onLogout }) => {
       if (window.confirm("Are you sure you want to delete this product?")) {
         const result = await deleteProduct(id);
         if (result.success) {
+          toast.success("Product deleted successfully");
           refreshStats();
         } else {
           alert(result.error);
@@ -95,7 +97,7 @@ const Dashboard = ({ onLogout }) => {
 
         {statsLoading ? (
           <p>Loading category data...</p>
-        ) : stats?.productsByCategory?.length > 0 ? (
+        ) : stats?.productsByCategory ? (
           <CategoryBreakdown
             categoryData={stats.productsByCategory}
             loading={statsLoading}
@@ -108,7 +110,7 @@ const Dashboard = ({ onLogout }) => {
       <Card>
         {productsLoading ? (
           <p>Loading products...</p>
-        ) : products?.length > 0 ? (
+        ) : products ? (
           <ProductsTable
             products={products}
             onEdit={handleEditProduct}
