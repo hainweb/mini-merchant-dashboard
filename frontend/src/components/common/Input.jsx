@@ -16,7 +16,7 @@ const Input = ({
         </label>
       )}
       <input
-        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition ${
+        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-700 focus:border-transparent outline-none transition ${
           error ? 'border-red-500' : 'border-gray-300'
         }`}
         {...props}
